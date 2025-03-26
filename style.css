@@ -7,7 +7,9 @@
 }
 
 .navbar {
-    background: #131313;
+    background: #EECDA3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -30,8 +32,8 @@
 }
 
 .navbar__logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #e07f97 0%, #ee9073 100%);
+    background-color: #95c6f0;
+    background-image: linear-gradient(to top, #95c6f0 0%, #95c6f0 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -86,14 +88,14 @@
     border-radius: 4px;
     background: #EECDA3;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #EF629F, #95c6f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 
     color: #fff;
     transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-    color: #fa85ac;
+    color: #8796d7;
     transition: all 0.3s ease;
 }
 
@@ -121,7 +123,10 @@
     }
 
     .navbar__menu.active {
-        background: #b4a0e7;
+        background: #EECDA3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -170,13 +175,217 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        transform: translate(5%, 20%);
         cursor: pointer;
         z-index: 100;
     }
-
+    
     .navbar__toggle .bar {
         display: block;
-        cursor: pointer;
+        background-color: #fff;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        width: 25px;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+/* Hero Section */
+.hero {
+    background: #EECDA3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 200px 0;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero__heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.hero__heading span {
+    background: #fd746c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -moz-text-fill-color: transparent;
+}
+
+.hero__description {
+    font-size: 60px;
+    background: #f04d83;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fd7a53, #ff4c87);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff7449, #ff4683); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.highlight {
+    border-bottom: 4px solid rgb (132, 0, 255);
+}
+
+@media screen and (max-width: 768px) {
+    .hero__heading {
+        font-size: 60px;
+    }
+
+    .hero__description {
+        font-size: 40px;
+    }
+}
+
+/* About Section */
+.main {
+    background: #EECDA3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10rem 0;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 99%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content {
+    color: #fff;
+    width: 100%;
+}
+
+.main__content h1 {
+    font-size: 2rem;
+    background-color: #95c6f0;
+    background-image: linear-gradient(to top, #5eb0f8 0%, #1b85e2 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main__content h2 {
+    font-size: 3.5rem;
+    background: #f04d83;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fd7a53, #ff4c87);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff7449, #ff4683); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main__btn {
+    font-size: 1.8rem;
+    background: #EECDA3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EF629F, #95c6f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FF5F6D;
+    transition: all 0.4s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+.main__img-card {
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url('images/cat-the-nerd-1.jpeg'); /* Указываем путь к картинке */
+    background-size: cover; /* Заполняем карточку изображением */
+    background-position: center; /* Центрируем изображение */
+    transition: transform 0.3s ease; /* Добавим плавную анимацию */
+}
+
+.main__img-card:hover {
+    transform: scale(1.05); /* Увеличиваем карточку при наведении */
+}
+
+ 
