@@ -291,7 +291,7 @@
 }
 
 .main__content h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     background-color: #95c6f0;
     background-image: linear-gradient(to top, #5eb0f8 0%, #1b85e2 100%);
     background-size: 100%;
@@ -323,14 +323,13 @@
 }
 
 .main__btn {
-    font-size: 1.8rem;
+    font-size: 2rem;
     background: #EECDA3;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EF629F, #95c6f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 20px 60px;
     border: none;
     border-radius: 4px;
-    color: #fff;
     margin-top: 2rem;
     cursor: pointer;
     position: relative;
@@ -352,8 +351,8 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #FF5F6D;
-    transition: all 0.4s;
+    background: #ff1ead;
+    transition: all 0.6s;
     border-radius: 4px;
 }
 
@@ -361,7 +360,7 @@
     color: #fff;
 }
 
-.main__btn:hover:after {
+.main__btn:hover::after {
     width: 100%;
 }
 
@@ -369,7 +368,7 @@
     text-align: center;
 }
 
-.main__img-card {
+.main__img--card {
     margin: 10px;
     height: 500px;
     width: 500px;
@@ -378,14 +377,200 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background-image: url('images/cat-the-nerd-1.jpeg'); /* Указываем путь к картинке */
-    background-size: cover; /* Заполняем карточку изображением */
-    background-position: center; /* Центрируем изображение */
-    transition: transform 0.3s ease; /* Добавим плавную анимацию */
+    
+    background-image: url('images/image1.jpeg');
+    background-size: cover;  /* Покрывает всю область, сохраняя пропорции */
+    background-position: center;  /* Центрирует изображение внутри блока */
+}
+    
+
+#card-2 {
+    background: #ff512f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd2476, #ff512f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd2476, #ff512f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.main__img-card:hover {
-    transform: scale(1.05); /* Увеличиваем карточку при наведении */
+/* Mobile Responsive */
+@media screen and (max-width: 1100px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+    
+    .main__img--container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__img--card {
+        height: 425px;
+        width: 425px;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
 }
 
- 
+@media screen and (max-width: 480px) {
+    .main__img--card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 2rem;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* Services Section */
+.services {
+    background: #EECDA3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.services h1 {
+    background-color: #f04d83;
+    background-image: linear-gradient(to right, #d368db 0%, #f04d83 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.services__card {
+    margin: 10px;
+    height: 425px;
+    width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    transition: 0.3s ease-in;
+}
+
+.services__card:nth-child(1) {
+    background-image: url('images/image3.jpeg');
+    background-size: cover;  /* Покрывает всю область, сохраняя пропорции */
+    background-position: center;  /* Центрирует изображение внутри блока */
+}
+
+.services__card:nth-child(2) {
+    background-image: url('images/image5.jpeg');
+    background-size: cover;  /* Покрывает всю область, сохраняя пропорции */
+    background-position: center;  /* Центрирует изображение внутри блока */
+}
+
+
+.services__card:nth-child(3) {
+    background-image: url('images/image2.jpeg');
+    background-size: cover;  /* Покрывает всю область, сохраняя пропорции */
+    background-position: center;  /* Центрирует изображение внутри блока */
+}
+
+.services__card:nth-child(4) {
+    background-image: url('images/image4.jpeg');
+    background-size: cover;  /* Покрывает всю область, сохраняя пропорции */
+    background-position: center;  /* Центрирует изображение внутри блока */
+}
+
+.services__card h2 {
+    text-align: center;
+}
+
+.services__card p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.services__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.services__card button {
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #282626;
+    font-size: 1rem;
+}
+
+.services__card button:hover {
+    cursor: pointer;
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+    .services__wrapper {
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .services__wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+}
