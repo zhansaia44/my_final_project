@@ -57,3 +57,101 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu)
 navLogo.addEventListener('click', hideMobileMenu)
+
+// Плавная прокрутка
+document.querySelectorAll('.navbar__links, .button, .main__btn a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+  
+  // Работа кнопок "Старт" — всплывающее сообщение
+  document.querySelectorAll('.start-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      alert('Молодец! Мем загружается!');
+    });
+  });
+  
+  // Фиктивная регистрация
+  const form = document.getElementById('register-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Спасибо за регистрацию!');
+      form.reset();
+    });
+  }
+
+  // Плавная прокрутка
+document.querySelectorAll('.navbar__links, .button, .main__btn a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // Работа кнопок "Старт"
+document.querySelectorAll('.start-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      showRandomMemeText();
+    });
+  });
+  
+  // Массив разных текстов
+  const memeTexts = [
+    "Ты выбрал лучший мем!",
+    "Смех обеспечен!",
+    "Этот мем взорвет твой день!",
+    "Ты настоящий ценитель мемов!",
+    "Готовься к улыбке!",
+    "Мем настроения загружен!",
+    "Эпический мем доставлен!",
+    "Ха-ха! Ты попал в мир мемов!"
+  ];
+  
+  // Функция для показа случайного текста
+  function showRandomMemeText() {
+    // Выбираем случайный текст
+    const randomText = memeTexts[Math.floor(Math.random() * memeTexts.length)];
+  
+    // Создаем затемненный фон
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '1000';
+  
+    // Создаем текст
+    const text = document.createElement('div');
+    text.textContent = randomText;
+    text.style.color = 'white';
+    text.style.fontSize = '36px';
+    text.style.fontWeight = 'bold';
+    text.style.textAlign = 'center';
+    text.style.padding = '20px';
+  
+    overlay.appendChild(text);
+    document.body.appendChild(overlay);
+  
+    // Убрать по клику
+    overlay.addEventListener('click', () => {
+      document.body.removeChild(overlay);
+    });
+  }

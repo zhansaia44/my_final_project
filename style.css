@@ -760,4 +760,15 @@
     width: 110%; /* Увеличиваем длину подчеркивания при наведении */
 }
 
+/* Регистрация */
+#register input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: none;
+  }
+  #register form {
+    margin-top: 20px;
+  }
 
