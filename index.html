@@ -1,130 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
-    <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meow Meme</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <!-- Navbar Section -->
-     <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#home" class="navbar__logo">Meow meme</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span> 
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">Главная</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-page">О нас</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#services" class="navbar__links" id="services-page">Услуги</a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="#register" class="button" id="signup">Регистрация</a>
-                </li>
-            </ul>
-        </div>
-     </nav>
 
-    <!-- Hero Section -->
-     <div class="hero" id="home">
-        <div class="hero__container">
-            <h1 class="hero__heading">Выбери свой <span>мем</span></h1>
-            <p class="hero__description">Будь в тренде</p>
-            <button class="main__btn"><a href="#about">Подробнее</a></button>
-        </div>
-     </div>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="#home" class="navbar__logo">Meow Meme</a>
+      <ul class="navbar__menu">
+        <li><a href="#home" class="navbar__links">Главная</a></li>
+        <li><a href="#about" class="navbar__links">О нас</a></li>
+        <li><a href="#gallery" class="navbar__links">Мемы</a></li>
+        <li><a href="#register" class="button">Регистрация</a></li>
+      </ul>
+    </div>
+  </nav>
 
-     <!-- About Section -->
-     <div class="main" id="about">
-        <div class="main__container">
-            <div class="main__img--container">
-              <div class="main__img--card"></div>
-            </div>
-            <div class="main__content">
-                <h1>Зачем нужны мемы?</h1>
-                <h2>Для настроения</h2>
-                <p>Напиши нам, если хочешь узнать побробнее</p>
-                <button class="main__btn"><a href="#register">Регистрация</a></button>
-            </div>
-        </div>
-     </div>
+  <section class="hero" id="home">
+    <h1>Добро пожаловать в мир мемов</h1>
+    <p>Лучшие мемы для твоего настроения</p>
+    <a href="#about" class="main__btn">Подробнее</a>
+  </section>
 
-    <!-- Services Section -->
-<div class="services" id="services">
-    <h1>Ваш мем</h1>
-    <div class="services__wrapper">
-      <div class="services__card">
-        <h2>Индивидуальная подборка</h2>
-        <p>AI Powered technology</p>
-        <div class="services__btn">
-          <button class="start-btn">Старт</button>
-        </div>
+  <section class="about" id="about">
+    <div class="about__content">
+      <div class="about__text">
+        <h2>О нас</h2>
+        <p>Мы любим мемы так же, как и ты. Собираем их вручную и выкладываем с любовью.</p>
       </div>
-      <div class="services__card">
-        <h2>Готов?</h2>
-        <p>Погрузись в мир мемов</p>
-        <div class="services__btn">
-          <button class="start-btn">Старт</button>
-        </div>
+      <div class="about__image" style="background-image: url('images/image1.jpeg');"></div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Галерея мемов</h2>
+    <div class="gallery__grid">
+      <div class="gallery__item large" style="background-image: url('images/image2.jpeg');">
+        <button class="start-btn">Старт</button>
       </div>
-      <div class="services__card">
-        <h2>Самые смешные</h2>
-        <p>"Вот умора"</p>
-        <div class="services__btn">
-          <button class="start-btn">Старт</button>
-        </div>
+      <div class="gallery__item large" style="background-image: url('images/image3.jpeg');">
+        <button class="start-btn">Старт</button>
       </div>
-      <div class="services__card">
-        <h2>Жизненные</h2>
-        <p>Бесконечный выбор</p>
-        <div class="services__btn">
-          <button class="start-btn">Старт</button>
-        </div>
+      <div class="gallery__item large" style="background-image: url('images/image4.jpeg');">
+        <button class="start-btn">Старт</button>
+      </div>
+      <div class="gallery__item large" style="background-image: url('images/image5.jpeg');">
+        <button class="start-btn">Старт</button>
       </div>
     </div>
-  </div>
+  </section>
 
-     <!-- Features Section -->
-     <div class="main" id="sign-up">
-        <div class="main__container">
-            <div class="main__content--2">
-                <h1>Тебе нравятся мемы?</h1>
-                <h2>Подпишись на нас</h2>
-                <p>Поддержи нас донатом</p>
-                <button class="main__btn"><a href="# ">Регистрация</a></button>
-            </div>
-            <div class="main__img--container">
-              <div class="main__img--card--2"></div>
-            </div>
-        </div>
-     </div>
-
-    
-
-        <!-- Registration Section -->
-<div class="main" id="register">
-    <div class="main__container">
-      <div class="main__content">
-        <h1>Регистрация</h1>
-        <form id="register-form">
-          <input type="text" placeholder="Введите ФИО" required><br><br>
-          <input type="tel" placeholder="Введите номер телефона" required><br><br>
-          <button class="main__btn" type="submit">Отправить</button>
-        </form>
+  <section class="extra">
+    <div class="extra__block">
+      <div class="extra__text">
+        <h3>А ещё у нас есть много интересного!</h3>
+        <p>Скоро добавим ещё больше мемов, рубрик и весёлых подборок. Следи за обновлениями!</p>
       </div>
+      <div class="extra__image" style="background-image: url('images/image6.jpeg');"></div>
     </div>
-  </div>
- 
+  </section>
 
-     <script src="app.js"></script>
-  </body>
+  <section class="register" id="register">
+    <h2>Регистрация</h2>
+    <form id="register-form">
+      <input type="text" placeholder="Ваше ФИО" required/>
+      <input type="tel" placeholder="Телефон" required/>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <div id="overlay" class="overlay" style="display:none;">
+    <div class="overlay-text" id="overlay-text"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
